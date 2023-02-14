@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detección de enfermedades</title>
+
+    <link rel="stylesheet" href="css.css" />
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </head>
+
+  <body>
+    <div class="main">
+      <div class="content">
+        <h1 class="title">Diagnostico de Prader-Willi</h1>
+        <p class="info">
+          Con este diagnostico podemos conocer si la persona padece del sindrome
+          de Prader-Willi
+        </p>
+
+        <button class="abrir">Realizar prueba</button>
+      </div>
+    </div>
+
+    <div class="modal-container">
+      <div class="modal modal-close">
+        <p class="close">X</p>
+        <div class="modal-textos">
+          <h1 class="part">Información del paciente</h1>
+          <form action="">
+            <div class="fields">
+              <label class="datas" for="">Nombre del paciente: </label>
+              <input
+                class="input"
+                type="text"
+                name=""
+                id=""
+                placeholder="Ingrese el nombre"
+              />
+            </div>
+            <div class="fields">
+              <label class="datas" for="">Edad del paciente (años): </label>
+              <input
+                class="input"
+                type="number"
+                name=""
+                id=""
+                placeholder="Ingrese la edad"
+              />
+            </div>
+            <div class="fields">
+              <label class="datas" for="">Estatura del paciente (m): </label>
+              <input
+                class="input"
+                type="number"
+                name=""
+                id=""
+                placeholder="Ingrese la estatura"
+              />
+            </div>
+            <div class="fields">
+              <label class="datas" for="">Peso del paciente (kg): </label>
+              <input
+                class="input"
+                type="number"
+                name=""
+                id=""
+                placeholder="Ingrese el peso"
+              />
+            </div>
+          </form>
+
+          <h1 class="part">Cuestionario</h1>
+          <form action="">
+            <div class="fields">
+              <label class="data" for=""
+                >¿Sufre con problemas de aprendizaje?
+              </label>
+              <div class="orden">
+                <input
+                  class="answer"
+                  type="radio"
+                  name="aprendizaje"
+                  value="si"
+                />
+                <label class="answer" for="">Si</label>
+                <input
+                  class="answer"
+                  type="radio"
+                  name="aprendizaje"
+                  value="no"
+                />
+                <label class="answer" for="">No</label>
+              </div>
+            </div>
+            <div class="fields">
+              <label class="data" for=""
+                >¿Cuenta con comportamientos impulsivos?
+              </label>
+              <div class="orden">
+                <input
+                  class="answer"
+                  type="radio"
+                  name="comportamiento"
+                  value="si"
+                />
+                <label class="answer" for="">Si</label>
+                <input
+                  class="answer"
+                  type="radio"
+                  name="comportamiento"
+                  value="no"
+                />
+                <label class="answer" for="">No</label>
+              </div>
+            </div>
+            <div class="fields">
+              <label class="data" for=""> ¿Cuenta con rasgos faciales característicos de la dolicocefalia en la infancia, cara estrecha o diámetro bifrontal, ojos almendrados, ojos pequeños? </label>
+              <div class="orden">
+                <input class="answer" type="radio" name="rasgos" value="si" />
+                <label class="answer" for="">Si</label>
+                <input class="answer" type="radio" name="rasgos" value="no" />
+                <label class="answer" for="">No</label>
+              </div>
+            </div>
+            <div class="fields">
+              <label class="data" for="">¿Tiene problemas para dormir? </label>
+              <div class="orden">
+                <input class="answer" type="radio" name="dormir" value="si" />
+                <label class="answer" for="">Si</label>
+                <input class="answer" type="radio" name="dormir" value="no" />
+                <label class="answer" for="">No</label>
+              </div>
+            </div>
+
+            <div class="fields">
+              <label class="data" for="">¿Cuenta con fuerza muscular? </label>
+              <div class="orden">
+                <input class="answer" type="radio" name="fuerza" value="si" />
+                <label class="answer" for="">Si</label>
+                <input class="answer" type="radio" name="fuerza" value="no" />
+                <label class="answer" for="">No</label>
+              </div>
+            </div>
+            <div class="fields">
+              <label class="data" for="">¿Tiene los ojos pesados? </label>
+              <div class="orden">
+                <input class="answer" type="radio" name="ojos" value="si" />
+                <label class="answer" for="">Si</label>
+                <input class="answer" type="radio" name="ojos" value="no" />
+                <label class="answer" for="">No</label>
+              </div>
+            </div>
+            <div class="fields">
+              <label class="data" for=""
+                >¿Cuenta con dificultades para respirar?
+              </label>
+              <div class="orden">
+                <input class="answer" type="radio" name="respirar" value="si" />
+                <label class="answer" for="">Si</label>
+                <input class="answer" type="radio" name="respirar" value="no" />
+                <label class="answer" for="">No</label>
+              </div>
+            </div>
+            <div class="fields">
+              <label class="data" for=""
+                >¿Cuenta con la boca seca usualmente?
+              </label>
+              <div class="orden">
+                <input class="answer" type="radio" name="seca" value="si" />
+                <label class="answer" for="">Si</label>
+                <input class="answer" type="radio" name="seca" value="no" />
+                <label class="answer" for="">No</label>
+              </div>
+            </div>
+            <div class="fields">
+              <label class="data" for="">Se alimenta de forma... </label>
+              <div class="orden">
+                <input
+                  class="answer"
+                  type="radio"
+                  name="comer"
+                  value="excesiva"
+                />
+                <label class="answer" for="">Excesiva</label>
+                <input
+                  class="answer"
+                  type="radio"
+                  name="comer"
+                  value="adecuada"
+                />
+                <label class="answer" for="">Adecuada</label>
+                <input
+                  class="answer"
+                  type="radio"
+                  name="comer"
+                  value="insuficiente"
+                />
+                <label class="answer" for="">Insuficiente</label>
+              </div>
+            </div>
+          </form>
+
+          <h1 class="part">Preguntas parentales</h1>
+          <form action="">
+            <div class="fields">
+              <label class="data" for=""
+                >¿Tu hijo cuenta con algun tipo de retraso mental?
+              </label>
+              <div class="orden">
+                <input class="answer" type="radio" name="retraso" value="si" />
+                <label class="answer" for="">Si</label>
+                <input class="answer" type="radio" name="retraso" value="no" />
+                <label class="answer" for="">No</label>
+              </div>
+            </div>
+            <div class="fields">
+              <label class="data" for=""
+                >¿Tu hijo cuenta con algun comportamiento obsesivo por la comida?
+              </label>
+              <div class="orden">
+                <input
+                  class="answer"
+                  type="radio"
+                  name="obsesion"
+                  value="si"
+                />
+                <label class="answer" for="">Si</label>
+                <input
+                  class="answer"
+                  type="radio"
+                  name="obsesion"
+                  value="no"
+                />
+                <label class="answer" for="">No</label>
+              </div>
+            </div>
+
+            <div class="fields">
+              <label class="data" for=""
+                >¿Tu hijo cuenta con problemas del habla?
+              </label>
+              <div class="orden">
+                <input
+                  class="answer"
+                  type="radio"
+                  name="habla"
+                  value="si"
+                />
+                <label class="answer" for="">Si</label>
+                <input
+                  class="answer"
+                  type="radio"
+                  name="habla"
+                  value="no"
+                />
+                
+                <label class="answer" for="">No</label>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="btn-enviar">
+          <button class="enviar">Enviar</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="prop">
+      <div class="message message-close">
+        <p class="cerrar-prop">X</p>
+        <h1 class="mes">Mensaje</h1>
+        <p class="diagnostic">
+            <H1 id="mostrarN"></H1>
+            <p id="probabilidad"></p>
+        </p>
+      </div>
+    </div>
+
+
+    <script src="codigo.js"></script>
+  </body>
+</html>
